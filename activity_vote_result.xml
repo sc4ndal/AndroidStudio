@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VoteResult">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/txtV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="그림1" />
+
+            <RatingBar
+                android:id="@+id/rB1"
+                android:isIndicator="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/txtV2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="그림2" />
+
+            <RatingBar
+                android:id="@+id/rB2"
+                android:isIndicator="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/txtV3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="그림3" />
+
+            <RatingBar
+                android:id="@+id/rB3"
+                android:isIndicator="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/txtV4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="그림4" />
+
+            <RatingBar
+                android:id="@+id/rB4"
+                android:isIndicator="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/txtV5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="그림5" />
+
+            <RatingBar
+                android:id="@+id/rB5"
+                android:isIndicator="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/txtV6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="그림6" />
+
+            <RatingBar
+                android:id="@+id/rB6"
+                android:isIndicator="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/txtV7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="그림7" />
+
+            <RatingBar
+                android:id="@+id/rB7"
+                android:isIndicator="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/txtV8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="그림8" />
+
+            <RatingBar
+                android:id="@+id/rB8"
+                android:isIndicator="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/txtV9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="그림9" />
+
+            <RatingBar
+                android:id="@+id/rB9"
+                android:isIndicator="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:text="돌아가기" />
+        </TableRow>
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
