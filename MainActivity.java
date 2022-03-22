@@ -1,55 +1,66 @@
-package com.example.picvote;
+package com.example.callphone02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.SearchManager;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnResult;
+    Button btnCall, btnGoogle, btnMap, btnSearch, btnMessage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("명화 투표 어플");
 
-        final int voteCount[] = new int[9];
-        for (int i = 0; i < 9; i++)
-            voteCount[i] = 0;
-
-            ImageView image[] = new ImageView[9];
-            Integer imageId[] = {R.id.iv1, R.id.iv2, R.id.iv3, R.id.iv4, R.id.iv5, R.id.iv6, R.id.iv7, R.id.iv8, R.id.iv9};
-            final String imgName[] = {"독서하는 소녀", "꽃장식 모자 소녀", "부채를 든 소녀", "이레느깡 단 베르양", "잠자는 소녀", "테라스의 두 자매", "피아노 레슨", "피아노 앞의 소녀들", "해변에서"};
-
-            for (int i = 0; i < imageId.length; i++){
-                final int index;
-                index = i;
-                image[index] = (ImageView)findViewById(imageId[index]);
-
-                image[index].setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        voteCount[index]++;
-                        Toast.makeText(MainActivity.this, imgName[index] + ": 총" + voteCount[index] + " 표", Toast.LENGTH_SHORT).show();
-                    }
-                });
+        btnCall = (Button) findViewById(R.id.btnCall);
+        btnCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentCall = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:01029231863"));
+                startActivity(intentCall);
             }
+        });
+        btnGoogle = (Button) findViewById(R.id.btnGoogle);
+        btnGoogle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentGoogle = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.naver.com"));
+                startActivity(intentGoogle);
+            }
+        });
+        btnMap = (Button) findViewById(R.id.btnMap);
+        btnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentMap = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:35.16634991634856, 129.07311173075632"));   //geo의 좌표로 지도 검색
+                startActivity(intentMap);
+            }
+        });
 
-            btnResult = (Button)findViewById(R.id.btnResult); //btnResult 버튼을 가져옴
-            btnResult.setOnClickListener(new View.OnClickListener() {   //btnResult 눌렀을때
-                @Override
-                public void onClick(View view) {
-                    Intent intVote = new Intent(getApplicationContext(), VoteResult.class);   //VoteResult클래스로 화면 전환
-                    intVote.putExtra("vc", voteCount);   //intVote 객체에 vc의 이름으로 voteCount를 넣음
-                    startActivity(intVote);   //Intent 객체 intVote를 실행
-                }
-            });
+        btnSearch = (Button) findViewById(R.id.btnSearch);
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentSearch = new Intent(Intent.ACTION_WEB_SEARCH);
+                intentSearch.putExtra(SearchManager.QUERY, "안드로이드");   //검색창에서 안드로이드 검색
+                startActivity(intentSearch);
+            }
+        });
+
+        btnMessage = (Button) findViewById(R.id.btnMessage);
+        btnMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentMessage = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:01029231863"));    //smsto에 적혀있는 번호로 메세지 보냄
+                intentMessage.putExtra("sms_body", "ㅎㅇ");     //메세지 입력창에 ㅎㅇ라고 먼저 적어둠
+                startActivity(intentMessage);
+            }
+        });
 
     }
 }
