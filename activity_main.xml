@@ -11,46 +11,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:textColor="#7FFFD4"
-            android:backgroundTint="#FFD700"
-            android:id="@+id/btnCall"
+        <ListView
+            android:id="@+id/LvFruit"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="전화걸기" />
-
-        <Button
-            android:textColor="#ADFF2F"
-            android:backgroundTint="@color/black"
-            android:id="@+id/btnGoogle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="네이버열기" />
-
-        <Button
-            android:textColor="#ADFF2F"
-            android:backgroundTint="@color/black"
-            android:id="@+id/btnMap"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="지도열기" />
-
-        <Button
-            android:textColor="#ADFF2F"
-            android:backgroundTint="@color/black"
-            android:id="@+id/btnSearch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="검색하기" />
-
-
-        <Button
-            android:textColor="#ADFF2F"
-            android:backgroundTint="@color/black"
-            android:id="@+id/btnMessage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="문자보내기" />
-
+            android:layout_height="match_parent" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
