@@ -12,29 +12,24 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class ListViewAdapter extends BaseAdapter {
-    private ArrayList<ListViewItem> listViewItemList = new ArrayList<ListViewItem>();
-
-    public ListViewAdapter(){
-
-    }
-    @Override
-    public int getCount() {
-        return listViewItemList.size();
-    }
+    private ArrayList<ListViewItem> list = new ArrayList<ListViewItem>();
 
     @Override
-    public Object getItem(int i) {
-        return null;
+    public int getCount() { return list.size(); }
+
+    @Override
+    public Object getItem(int position) {
+        return list.get(position);
     }
 
     @Override
-    public long getItemId(int i) {
-        return 0;
+    public long getItemId(int position) {
+        return position;
     }
 
     @Override
-    public View getView(int positon, View convertView, ViewGroup parent) {
-        final int pos = positon;
+    public View getView(int position, View convertView, ViewGroup parent) {
+        final int pos = position;
         final Context context = parent.getContext();
 
         if(convertView == null){
@@ -42,26 +37,26 @@ public class ListViewAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.list_item, parent, false);
         }
 
-        ImageView iconImageView = (ImageView) convertView.findViewById(R.id.imageView);
-        TextView titleTextView = (TextView) convertView.findViewById(R.id.txtV1);
-        TextView descTextView = (TextView) convertView.findViewById(R.id.txtV2);
+        ImageView icon = (ImageView) convertView.findViewById(R.id.imageView);
+        TextView txtName = (TextView) convertView.findViewById(R.id.txtName);
+        TextView txtTelNo = (TextView) convertView.findViewById(R.id.txtTelNo);
 
-        ListViewItem listViewItem = listViewItemList.get(positon);
+        ListViewItem item = (ListViewItem) list.get(pos);
 
-        iconImageView.setImageDrawable(listViewItem.getDrawableIcon());
-        titleTextView.setText(listViewItem.getTitle());
-        descTextView.setText(listViewItem.getDescription());
+        icon.setImageDrawable(item.getDrawableIcon());
+        txtName.setText(item.getName());
+        txtTelNo.setText(item.getTelNo());
 
         return convertView;
     }
 
-    public void addItem(Drawable icon, String title, String desc){
+    public void addItem(Drawable icon, String txtName, String txtTelNo){
         ListViewItem item = new ListViewItem();
 
         item.setDrawableIcon(icon);
-        item.setTitle(title);
-        item.setDescription(desc);
+        item.setName(txtName);
+        item.setTelNo(txtTelNo);
 
-        listViewItemList.add(item);
+        list.add(item);
     }
 }
