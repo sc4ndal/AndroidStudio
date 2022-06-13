@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8pt"
+            android:layout_weight="2"
+            android:text="휴대폰 기종 선택"
+            android:textSize="16pt" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtPdata"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="7pt"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_marginLeft="8pt"-->
+<!--            android:layout_marginRight="8pt"-->
+<!--            android:textSize="10pt"-->
+<!--            android:gravity="center" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnM"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="8pt"-->
+<!--            android:layout_weight="2"-->
+<!--            android:enabled="false"-->
+<!--            android:text="요금제 선택"-->
+<!--            android:textSize="16pt" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtMdata"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="7pt"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_marginLeft="8pt"-->
+<!--            android:layout_marginRight="8pt"-->
+<!--            android:textSize="10pt"-->
+<!--            android:gravity="center" />-->
+
+        <Button
+            android:id="@+id/btnNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8pt"
+            android:layout_weight="1"
+            android:text="공지사항"
+            android:textSize="16pt" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

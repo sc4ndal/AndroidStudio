@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".notice">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8pt"
+            android:layout_weight="7"
+            android:text=" 1. 이 어플리케이션은 할부, 약정\n24개월을 기준으로 계산합니다\n\n 2. 기기선택화면은\n기기명 | 출고가\n            | 공시지원금 이고
+\n요금선택화면은\n요금제 | 가격 입니다.\n\n 3. 부가서비스, 기타할인으로 월 요금이\n가감될 수 있습니다.\n\n 4. 그 외 자세한 사항은 아래 링크를 통해\n확인해주세요"
+            android:textSize="8pt" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="50pt"
+            android:layout_margin="8pt"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="20pt"
+            android:text="kt.com"
+            android:background="@color/black"
+            android:linksClickable="true"
+            android:autoLink="web"/>
+
+        <Button
+            android:id="@+id/btnback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8pt"
+            android:text="돌아가기" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
